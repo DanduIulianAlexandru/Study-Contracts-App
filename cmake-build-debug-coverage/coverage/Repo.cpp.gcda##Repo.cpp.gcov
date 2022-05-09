@@ -1,0 +1,1320 @@
+        -:    0:Source:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/repository/Repo.cpp
+        -:    0:Graph:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/repository/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/repository/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Repo.h"
+        -:    2:
+        -:    3:#include "assert.h"
+        -:    4:#include <iostream>
+        -:    5:#include <sstream>
+        -:    6:
+        -:    7:using std::ostream;
+        -:    8:using std::stringstream;
+        -:    9:
+function _ZlsRSoRK13RepoException called 1 returned 100% blocks executed 100%
+        1:   10:ostream& operator<<(ostream& out, const RepoException& ex) {
+        1:   11:    out << ex.msg;
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    return out;
+        -:   13:}
+        -:   14:
+function _ZNK4Repo5existERK10Discipline called 29 returned 100% blocks executed 92%
+       29:   15:bool Repo::exist(const Discipline& d) const {
+        -:   16:    try {
+       57:   17:        find(d.get_name());
+       29:   17-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   17-block  1
+call    3 returned 29
+branch  4 taken 1 (fallthrough)
+branch  5 taken 28 (throw)
+        1:   17-block  2
+call    6 returned 1
+       28:   17-block  3
+call    7 returned 28
+       28:   17-block  4
+        1:   18:        return true;
+        -:   19:    }
+       28:   20:    catch (RepoException&) {
+       28:   20-block  0
+call    0 returned 28
+       28:   21:        return false;
+        -:   22:    }
+        -:   23:}
+        -:   24:
+function _ZN4Repo3addERK10Discipline called 29 returned 97% blocks executed 63%
+       29:   25:void Repo::add(const Discipline& d) {
+       29:   26:    if (exist(d)) {
+       29:   26-block  0
+call    0 returned 29
+branch  1 taken 1 (fallthrough)
+branch  2 taken 28
+        1:   27:        throw RepoException("The discipline already exists");
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   27-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   27-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 0
+    $$$$$:   27-block  3
+call   11 never executed
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+call   12 never executed
+    $$$$$:   27-block  6
+    $$$$$:   27-block  7
+call   13 never executed
+        -:   28:    }
+       28:   29:    disciplines.push_back(d);
+       28:   29-block  0
+call    0 returned 28
+       28:   30:}
+        -:   31:
+function _ZNK4Repo7get_allEv called 14 returned 100% blocks executed 100%
+       14:   32:const vector<Discipline>& Repo::get_all() const noexcept {
+       14:   33:    return disciplines;
+       14:   33-block  0
+        -:   34:}
+        -:   35:
+function _ZNK4Repo4findENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 37 returned 19% blocks executed 74%
+       37:   36:const Discipline& Repo::find(string name) const {
+       67:   37:    for (int i = 0; i < disciplines.size(); i ++){
+       37:   37-block  0
+       67:   37-block  1
+call    0 returned 67
+branch  1 taken 37 (fallthrough)
+branch  2 taken 30
+       30:   37-block  2
+       37:   38:        if (disciplines.at(i).get_name() == name)
+       37:   38-block  0
+call    0 returned 37
+call    1 returned 37
+call    2 returned 37
+call    3 returned 37
+branch  4 taken 7 (fallthrough)
+branch  5 taken 30
+        7:   39:            return disciplines.at(i);
+        7:   39-block  0
+call    0 returned 7
+        7:   39-block  1
+        -:   40:    }
+       30:   41:    throw RepoException("The discipline doesn t exist!");
+       30:   41-block  0
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+branch  3 taken 30 (fallthrough)
+branch  4 taken 0 (throw)
+       30:   41-block  1
+call    5 returned 30
+branch  6 taken 30 (fallthrough)
+branch  7 taken 0 (throw)
+       30:   41-block  2
+call    8 returned 30
+call    9 returned 30
+call   10 returned 0
+    $$$$$:   41-block  3
+call   11 never executed
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+call   12 never executed
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+call   13 never executed
+        -:   42:}
+        -:   43:
+function _ZN4Repo3dltENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 51%
+        5:   44:void Repo::dlt(string name) {
+        5:   45:    int i = 0;
+        5:   45-block  0
+        7:   46:    while (i < disciplines.size() && disciplines.at(i).get_name() != name) {
+        7:   46-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0
+        7:   46-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:   46-block  2
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+        7:   46-block  3
+call    9 returned 7
+branch 10 taken 2 (fallthrough)
+branch 11 taken 5
+        2:   46-block  4
+        5:   46-block  5
+        7:   46-block  6
+branch 12 taken 7 (fallthrough)
+branch 13 taken 0
+        7:   46-block  7
+call   14 returned 7
+        7:   46-block  8
+branch 15 taken 2 (fallthrough)
+branch 16 taken 5
+    $$$$$:   46-block  9
+branch 17 never executed
+branch 18 never executed
+    $$$$$:   46-block 10
+call   19 never executed
+    $$$$$:   46-block 11
+call   20 never executed
+        2:   47:        i++;
+        2:   47-block  0
+        -:   48:    }
+        5:   49:    if (i < disciplines.size()) disciplines.erase(disciplines.begin() + i);
+        5:   49-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0
+        5:   49-block  1
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+branch  7 taken 5 (fallthrough)
+branch  8 taken 0 (throw)
+        5:   49-block  2
+    $$$$$:   49-block  3
+    $$$$$:   49-block  4
+    $$$$$:   49-block  5
+call    9 never executed
+    #####:   50:    else throw RepoException("Discipline doesn t exist!\n");
+    %%%%%:   50-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   50-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   50-block  2
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    $$$$$:   50-block  3
+call   11 never executed
+    $$$$$:   50-block  4
+    $$$$$:   50-block  5
+call   12 never executed
+    $$$$$:   50-block  6
+    $$$$$:   50-block  7
+call   13 never executed
+        5:   51:}
+        5:   51-block  0
+        -:   52:
+function _ZN4Repo6modifyERK10DisciplineNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 52%
+        2:   53:void Repo::modify(const Discipline& d, string name) {
+        2:   54:    int ok = 1;
+        7:   55:    for (int i = 0; i < disciplines.size(); i++) {
+        2:   55-block  0
+        7:   55-block  1
+call    0 returned 7
+branch  1 taken 5 (fallthrough)
+branch  2 taken 2
+        5:   55-block  2
+        5:   56:        if (disciplines.at(i).get_name() == name) {
+        5:   56-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+branch  4 taken 2 (fallthrough)
+branch  5 taken 3
+        2:   57:            disciplines.at(i) = d;
+        2:   57-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   58:            ok = 0;
+        -:   59:        }
+        -:   60:    }
+        2:   61:    if (ok == 1)
+        2:   61-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   62:        throw RepoException("The discipline doesn t exist!");
+    %%%%%:   62-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   62-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   62-block  2
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    $$$$$:   62-block  3
+call   11 never executed
+    $$$$$:   62-block  4
+    $$$$$:   62-block  5
+call   12 never executed
+    $$$$$:   62-block  6
+    $$$$$:   62-block  7
+call   13 never executed
+        2:   63:}
+        2:   63-block  0
+        -:   64:
+        -:   65:
+        -:   66:
+        -:   67:
+        -:   68:
+        -:   69:
+        -:   70:
+        -:   71:
+        -:   72://TESTS
+function _Z8test_addv called 1 returned 100% blocks executed 58%
+        1:   73:void test_add() {
+        2:   74:    Repo repo;
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   74-block  1
+call    2 never executed
+        1:   75:    repo.add(Discipline{ "a", 2, "a", "a" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   75-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   75-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   75-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   75-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:   75-block  4
+call   23 never executed
+    $$$$$:   75-block  5
+    $$$$$:   75-block  6
+call   24 never executed
+    $$$$$:   75-block  7
+    $$$$$:   75-block  8
+call   25 never executed
+    $$$$$:   75-block  9
+    $$$$$:   75-block 10
+call   26 never executed
+    $$$$$:   75-block 11
+    $$$$$:   75-block 12
+call   27 never executed
+    $$$$$:   75-block 13
+    $$$$$:   75-block 14
+call   28 never executed
+    $$$$$:   75-block 15
+    $$$$$:   75-block 16
+call   29 never executed
+    $$$$$:   75-block 17
+       1*:   76:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   76-block  0
+call    4 never executed
+       1*:   77:    assert(repo.find("a").get_hours() == 2);
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   77-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   77-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   77-block  3
+call   10 never executed
+        1:   77-block  4
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   77-block  5
+call   13 never executed
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+call   14 never executed
+    $$$$$:   77-block  8
+        1:   78:    repo.add(Discipline("b", 4, "b", "b"));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   78-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   78-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   78-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   78-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:   78-block  4
+call   23 never executed
+    $$$$$:   78-block  5
+    $$$$$:   78-block  6
+call   24 never executed
+    $$$$$:   78-block  7
+    $$$$$:   78-block  8
+call   25 never executed
+    $$$$$:   78-block  9
+    $$$$$:   78-block 10
+call   26 never executed
+    $$$$$:   78-block 11
+    $$$$$:   78-block 12
+call   27 never executed
+    $$$$$:   78-block 13
+    $$$$$:   78-block 14
+call   28 never executed
+    $$$$$:   78-block 15
+    $$$$$:   78-block 16
+call   29 never executed
+    $$$$$:   78-block 17
+       1*:   79:    assert(repo.get_all().size() == 2);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   79-block  0
+call    4 never executed
+        -:   80:
+        -:   81:    //discipline already exists
+        -:   82:    try {
+       8*:   83:        repo.add(Discipline{ "b", 4, "b", "b" });
+        1:   83-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   83-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   83-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 1 (throw)
+    %%%%%:   83-block  4
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   83-block  5
+call   23 returned 1
+        1:   83-block  6
+        1:   83-block  7
+call   24 returned 1
+        1:   83-block  8
+        1:   83-block  9
+call   25 returned 1
+        1:   83-block 10
+        1:   83-block 11
+call   26 returned 1
+        1:   83-block 12
+        1:   83-block 13
+call   27 returned 1
+        1:   83-block 14
+        1:   83-block 15
+call   28 returned 1
+        1:   83-block 16
+        1:   83-block 17
+call   29 returned 1
+        1:   83-block 18
+    #####:   84:        assert(false);
+call    0 never executed
+        -:   85:    }
+        1:   86:    catch (const RepoException&) {
+        1:   86-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   87:        assert(true);
+        -:   88:    }
+        -:   89:    //discipline doesn t exist
+        -:   90:    try {
+        3:   91:        repo.find("c");
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    $$$$$:   91-block  1
+call    3 never executed
+call    4 never executed
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   91-block  2
+call    9 returned 1
+        1:   91-block  3
+        1:   91-block  4
+call   10 returned 1
+        1:   91-block  5
+    =====:   92:        assert(false);
+call    0 never executed
+        -:   93:    }
+        2:   94:    catch (const RepoException& e) {
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   94-block  1
+call    2 never executed
+        1:   95:        stringstream os;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   95-block  0
+call    3 never executed
+        1:   96:        os << e;
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:        assert(os.str().find("exista") >= 0);
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+        -:   98:    }
+        1:   99:}
+function _Z9test_findv called 1 returned 100% blocks executed 52%
+        1:  100:void test_find() {
+        2:  101:    Repo repo;
+        1:  101-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  101-block  1
+call    2 never executed
+        1:  102:    repo.add(Discipline{ "a", 2, "a", "a" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  102-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  102-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  102-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  102-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  102-block  4
+call   23 never executed
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+call   24 never executed
+    $$$$$:  102-block  7
+    $$$$$:  102-block  8
+call   25 never executed
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+call   26 never executed
+    $$$$$:  102-block 11
+    $$$$$:  102-block 12
+call   27 never executed
+    $$$$$:  102-block 13
+    $$$$$:  102-block 14
+call   28 never executed
+    $$$$$:  102-block 15
+    $$$$$:  102-block 16
+call   29 never executed
+    $$$$$:  102-block 17
+        1:  103:    repo.add(Discipline{ "b", 3, "b", "b" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  103-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  103-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  103-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  103-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  103-block  4
+call   23 never executed
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+call   24 never executed
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+call   25 never executed
+    $$$$$:  103-block  9
+    $$$$$:  103-block 10
+call   26 never executed
+    $$$$$:  103-block 11
+    $$$$$:  103-block 12
+call   27 never executed
+    $$$$$:  103-block 13
+    $$$$$:  103-block 14
+call   28 never executed
+    $$$$$:  103-block 15
+    $$$$$:  103-block 16
+call   29 never executed
+    $$$$$:  103-block 17
+        -:  104:
+        3:  105:    auto d = repo.find("a");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  105-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  105-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+call   11 returned 1
+    $$$$$:  105-block  4
+call   12 never executed
+       1*:  106:    assert(d.get_hours() == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  106-block  0
+call    3 never executed
+       1*:  107:    assert(d.get_teacher() == "a");
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  107-block  2
+call    6 never executed
+        1:  107-block  3
+call    7 returned 1
+       1*:  108:    assert(d.get_type() == "a");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  108-block  1
+call    6 never executed
+        1:  108-block  2
+call    7 returned 1
+        -:  109:
+        -:  110:    try {
+       3*:  111:        repo.find("c");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  111-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    %%%%%:  111-block  1
+call    7 never executed
+call    8 never executed
+        1:  111-block  2
+call    9 returned 1
+        1:  111-block  3
+        1:  111-block  4
+call   10 returned 1
+        1:  111-block  5
+    #####:  112:        assert(false);
+call    0 never executed
+        -:  113:    }
+        1:  114:    catch (RepoException&) {
+        1:  114-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  115:        assert(true);
+        -:  116:    }
+        -:  117:
+        1:  118:}
+function _Z11test_deletev called 1 returned 100% blocks executed 46%
+        1:  119:void test_delete() {
+        2:  120:    Repo repo;
+        1:  120-block  0
+call    0 returned 1
+        1:  120-block  1
+call    1 returned 1
+    $$$$$:  120-block  2
+call    2 never executed
+        1:  121:    repo.add(Discipline{ "a", 2, "a", "a" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  121-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  121-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  121-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  121-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  121-block  4
+call   23 never executed
+    $$$$$:  121-block  5
+    $$$$$:  121-block  6
+call   24 never executed
+    $$$$$:  121-block  7
+    $$$$$:  121-block  8
+call   25 never executed
+    $$$$$:  121-block  9
+    $$$$$:  121-block 10
+call   26 never executed
+    $$$$$:  121-block 11
+    $$$$$:  121-block 12
+call   27 never executed
+    $$$$$:  121-block 13
+    $$$$$:  121-block 14
+call   28 never executed
+    $$$$$:  121-block 15
+    $$$$$:  121-block 16
+call   29 never executed
+    $$$$$:  121-block 17
+        1:  122:    repo.dlt("a");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  122-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  122-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  122-block  2
+call    9 never executed
+    $$$$$:  122-block  3
+    $$$$$:  122-block  4
+call   10 never executed
+    $$$$$:  122-block  5
+        1:  123:    repo.add(Discipline{ "a", 2, "a", "a" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  123-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  123-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  123-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  123-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  123-block  4
+call   23 never executed
+    $$$$$:  123-block  5
+    $$$$$:  123-block  6
+call   24 never executed
+    $$$$$:  123-block  7
+    $$$$$:  123-block  8
+call   25 never executed
+    $$$$$:  123-block  9
+    $$$$$:  123-block 10
+call   26 never executed
+    $$$$$:  123-block 11
+    $$$$$:  123-block 12
+call   27 never executed
+    $$$$$:  123-block 13
+    $$$$$:  123-block 14
+call   28 never executed
+    $$$$$:  123-block 15
+    $$$$$:  123-block 16
+call   29 never executed
+    $$$$$:  123-block 17
+        1:  124:    repo.add(Discipline{ "b", 2, "b", "b" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  124-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  124-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  124-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  124-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  124-block  4
+call   23 never executed
+    $$$$$:  124-block  5
+    $$$$$:  124-block  6
+call   24 never executed
+    $$$$$:  124-block  7
+    $$$$$:  124-block  8
+call   25 never executed
+    $$$$$:  124-block  9
+    $$$$$:  124-block 10
+call   26 never executed
+    $$$$$:  124-block 11
+    $$$$$:  124-block 12
+call   27 never executed
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+call   28 never executed
+    $$$$$:  124-block 15
+    $$$$$:  124-block 16
+call   29 never executed
+    $$$$$:  124-block 17
+        1:  125:    repo.dlt("b");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  125-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  125-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  125-block  2
+call    9 never executed
+    $$$$$:  125-block  3
+    $$$$$:  125-block  4
+call   10 never executed
+    $$$$$:  125-block  5
+       1*:  126:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  126-block  0
+call    4 never executed
+       1*:  127:    assert(repo.get_all().at(0).get_teacher() == "a");
+        1:  127-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  127-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  127-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  127-block  3
+call   10 never executed
+        1:  127-block  4
+call   11 returned 1
+        1:  128:    repo.add(Discipline{ "b", 2, "b", "b" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  128-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  128-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  128-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  128-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  128-block  4
+call   23 never executed
+    $$$$$:  128-block  5
+    $$$$$:  128-block  6
+call   24 never executed
+    $$$$$:  128-block  7
+    $$$$$:  128-block  8
+call   25 never executed
+    $$$$$:  128-block  9
+    $$$$$:  128-block 10
+call   26 never executed
+    $$$$$:  128-block 11
+    $$$$$:  128-block 12
+call   27 never executed
+    $$$$$:  128-block 13
+    $$$$$:  128-block 14
+call   28 never executed
+    $$$$$:  128-block 15
+    $$$$$:  128-block 16
+call   29 never executed
+    $$$$$:  128-block 17
+        1:  129:    repo.add(Discipline{ "c", 5, "c", "c" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  129-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  129-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  129-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  129-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  129-block  4
+call   23 never executed
+    $$$$$:  129-block  5
+    $$$$$:  129-block  6
+call   24 never executed
+    $$$$$:  129-block  7
+    $$$$$:  129-block  8
+call   25 never executed
+    $$$$$:  129-block  9
+    $$$$$:  129-block 10
+call   26 never executed
+    $$$$$:  129-block 11
+    $$$$$:  129-block 12
+call   27 never executed
+    $$$$$:  129-block 13
+    $$$$$:  129-block 14
+call   28 never executed
+    $$$$$:  129-block 15
+    $$$$$:  129-block 16
+call   29 never executed
+    $$$$$:  129-block 17
+        1:  130:    repo.dlt("b");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  130-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  130-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  130-block  2
+call    9 never executed
+    $$$$$:  130-block  3
+    $$$$$:  130-block  4
+call   10 never executed
+    $$$$$:  130-block  5
+       1*:  131:    assert(repo.get_all().at(1).get_hours() == 5);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  131-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  131-block  1
+call    7 never executed
+        1:  132:}
+        -:  133:
+function _Z11test_modifyv called 1 returned 100% blocks executed 46%
+        1:  134:void test_modify() {
+        2:  135:    Repo repo;
+        1:  135-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  135-block  1
+call    2 never executed
+        1:  136:    repo.add(Discipline{ "a", 3, "a", "a" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  136-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  136-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  136-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  136-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  136-block  4
+call   23 never executed
+    $$$$$:  136-block  5
+    $$$$$:  136-block  6
+call   24 never executed
+    $$$$$:  136-block  7
+    $$$$$:  136-block  8
+call   25 never executed
+    $$$$$:  136-block  9
+    $$$$$:  136-block 10
+call   26 never executed
+    $$$$$:  136-block 11
+    $$$$$:  136-block 12
+call   27 never executed
+    $$$$$:  136-block 13
+    $$$$$:  136-block 14
+call   28 never executed
+    $$$$$:  136-block 15
+    $$$$$:  136-block 16
+call   29 never executed
+    $$$$$:  136-block 17
+        1:  137:    repo.add(Discipline{ "b", 2, "b", "b" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  137-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  137-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  137-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  137-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  137-block  4
+call   23 never executed
+    $$$$$:  137-block  5
+    $$$$$:  137-block  6
+call   24 never executed
+    $$$$$:  137-block  7
+    $$$$$:  137-block  8
+call   25 never executed
+    $$$$$:  137-block  9
+    $$$$$:  137-block 10
+call   26 never executed
+    $$$$$:  137-block 11
+    $$$$$:  137-block 12
+call   27 never executed
+    $$$$$:  137-block 13
+    $$$$$:  137-block 14
+call   28 never executed
+    $$$$$:  137-block 15
+    $$$$$:  137-block 16
+call   29 never executed
+    $$$$$:  137-block 17
+        1:  138:    repo.add(Discipline{ "c", 5, "c", "c" });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  138-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  138-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  138-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  138-block  3
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:  138-block  4
+call   23 never executed
+    $$$$$:  138-block  5
+    $$$$$:  138-block  6
+call   24 never executed
+    $$$$$:  138-block  7
+    $$$$$:  138-block  8
+call   25 never executed
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+call   26 never executed
+    $$$$$:  138-block 11
+    $$$$$:  138-block 12
+call   27 never executed
+    $$$$$:  138-block 13
+    $$$$$:  138-block 14
+call   28 never executed
+    $$$$$:  138-block 15
+    $$$$$:  138-block 16
+call   29 never executed
+    $$$$$:  138-block 17
+        2:  139:    Discipline d{ "v", 32, "v", "v" };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  139-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  139-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  139-block  2
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+    $$$$$:  139-block  3
+    $$$$$:  139-block  4
+    $$$$$:  139-block  5
+    $$$$$:  139-block  6
+    $$$$$:  139-block  7
+    $$$$$:  139-block  8
+call   18 never executed
+        1:  140:    repo.modify(d, "b");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  140-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  140-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  140-block  2
+call    9 never executed
+    $$$$$:  140-block  3
+    $$$$$:  140-block  4
+call   10 never executed
+    $$$$$:  140-block  5
+       1*:  141:    assert(repo.get_all().at(1).get_hours() == 32);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  141-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  141-block  1
+call    7 never executed
+       1*:  142:    assert(repo.get_all().at(1).get_teacher() == "v");
+        1:  142-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  142-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  142-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  142-block  3
+call   10 never executed
+        1:  142-block  4
+call   11 returned 1
+call   12 returned 1
+        1:  143:}
+function _Z10repo_testsv called 1 returned 100% blocks executed 100%
+        1:  144:void repo_tests() {
+        1:  145:    test_delete();
+        1:  145-block  0
+call    0 returned 1
+        1:  146:    test_find();
+call    0 returned 1
+        1:  147:    test_add();
+call    0 returned 1
+        1:  148:    test_modify();
+call    0 returned 1
+        1:  149:}

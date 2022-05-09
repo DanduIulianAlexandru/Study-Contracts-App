@@ -1,0 +1,3 @@
+C:/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir
+C:/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+C:/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir

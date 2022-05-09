@@ -1,0 +1,19 @@
+# ninja log v5
+3	470	6733158371580777	CMakeFiles/StudyContractsApp.dir/domain/Discipline.cpp.obj	30e12d7a690f3816
+8	609	6735110874704347	CMakeFiles/StudyContractsApp.dir/repository/Repo.cpp.obj	a8f86a537ccdb8bc
+33	471	6733158371630776	CMakeFiles/StudyContractsApp.dir/validate/Validate.cpp.obj	92b67a760c6ff25c
+1	594	6735110874524332	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+19	597	6735110874574340	CMakeFiles/StudyContractsApp.dir/user_interface/Console.cpp.obj	ee083a9609480869
+13	622	6735110874844317	CMakeFiles/StudyContractsApp.dir/service/Service.cpp.obj	ab6e4327ba049c4b
+623	1119	6735110879144316	StudyContractsApp.exe	f7de5a7b1c6afe65
+2	773	6735126999001344	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+8	775	6735126999031341	CMakeFiles/StudyContractsApp.dir/repository/file_repo.cpp.obj	85bf3866abd7f2e6
+775	1075	6735127001381348	StudyContractsApp.exe	f047150bcfce7f61
+1	936	6735149686993731	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+937	1316	6735149688877591	StudyContractsApp.exe	f047150bcfce7f61
+2	554	6735151103690985	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+555	922	6735151106829869	StudyContractsApp.exe	f047150bcfce7f61
+2	608	6735157843159137	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+609	1013	6735157846609536	StudyContractsApp.exe	f047150bcfce7f61
+2	624	6735158034846533	CMakeFiles/StudyContractsApp.dir/main.cpp.obj	9a29b8782857b2a2
+625	883	6735158036734548	StudyContractsApp.exe	f047150bcfce7f61

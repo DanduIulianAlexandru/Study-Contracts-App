@@ -1,0 +1,51 @@
+        -:    0:Source:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/main.cpp
+        -:    0:Graph:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository/Repo.h"
+        -:    2:#include "domain/Discipline.h"
+        -:    3:#include "validate/Validate.h"
+        -:    4:#include "user_interface/Console.h"
+        -:    5:#include "service/Service.h"
+function main called 1 returned 100% blocks executed 86%
+        1:    6:int main() {
+        1:    7:    repo_tests();
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8:    domain_tests();
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    validate_tests();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    tests_service();
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        -:   12:
+        1:   13:    Repo repo;
+        1:   13-block  0
+call    0 returned 1
+    $$$$$:   13-block  1
+call    1 never executed
+        -:   14:    Validate val;
+        1:   15:    Service srv{ repo, val };
+call    0 returned 1
+        1:   16:    Console ui{ srv };
+call    0 returned 1
+        1:   17:    ui.start();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:    return 0;
+        1:   18-block  0
+call    0 returned 1
+        -:   19:}

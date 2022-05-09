@@ -1,0 +1,31 @@
+        -:    0:Source:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/validate/Validate.h
+        -:    0:Graph:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/validate/Validate.cpp.gcno
+        -:    0:Data:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/validate/Validate.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include "../domain/Discipline.h"
+        -:    4:#include <vector>
+        -:    5:
+        -:    6:using std::vector;
+        -:    7:using std::string;
+        -:    8:using std::ostream;
+        -:    9:
+        -:   10:class ValidateException {
+        -:   11:    vector<string> msgs;
+        -:   12:public:
+function _ZN17ValidateExceptionC2ERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE called 2 returned 100% blocks executed 100%
+        2:   13:    explicit ValidateException(const vector<string>& errors) : msgs{ errors } {};
+        2:   13-block  0
+call    0 returned 2
+        -:   14:
+        -:   15:    friend ostream& operator<<(ostream& out, const ValidateException& ex);
+        -:   16:};
+        -:   17:
+        -:   18:
+        -:   19:class Validate {
+        -:   20:public:
+        -:   21:    static void validate(const Discipline& d);
+        -:   22:};
+        -:   23:
+        -:   24:void validate_tests();

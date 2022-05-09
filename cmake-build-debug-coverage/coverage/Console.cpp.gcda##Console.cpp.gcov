@@ -1,0 +1,1280 @@
+        -:    0:Source:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/user_interface/Console.cpp
+        -:    0:Graph:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/user_interface/Console.cpp.gcno
+        -:    0:Data:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/user_interface/Console.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Console.h"
+        -:    2:#include <iostream>
+        -:    3:#include <string>
+        -:    4:
+        -:    5:using std::cout;
+        -:    6:using std::cin;
+        -:    7:
+function _ZN7Console6add_uiEv called 0 returned 0% blocks executed 0%
+    #####:    8:void Console::add_ui() {
+    #####:    9:    string name, type, teacher;
+    %%%%%:    9-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    %%%%%:    9-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    $$$$$:    9-block  2
+call    6 never executed
+    $$$$$:    9-block  3
+call    7 never executed
+    $$$$$:    9-block  4
+call    8 never executed
+        -:   10:    int hours;
+    #####:   11:    cout << "Introduceti numele disciplinei:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   12:    cin >> name;
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   13:    cout << "Introduceti numarul de ore pe saptamana:";
+    %%%%%:   13-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:    cin >> hours;
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   15:    cout << "Introduceti tipul:";
+    %%%%%:   15-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   16:    cin >> type;
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   17:    cout << "Introduceti numele profesorului:";
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    cin >> teacher;
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   19:    srv.add_s(name, hours, type, teacher);
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:    cout << "Disciplina adaugata cu succes!\n";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:}
+        -:   22:
+function _ZN7Console6dlt_uiEv called 0 returned 0% blocks executed 0%
+    #####:   23:void Console::dlt_ui()
+        -:   24:{
+    #####:   25:    string name;
+    %%%%%:   25-block  0
+call    0 never executed
+    $$$$$:   25-block  1
+call    1 never executed
+    #####:   26:    cout << "Introduceti numele disciplinei pe care doriti sa o stergeti:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   27:    cin >> name;
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   28:    srv.dlt_s(name);
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   28-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   28-block  2
+call    6 never executed
+call    7 never executed
+    $$$$$:   28-block  3
+call    8 never executed
+    $$$$$:   28-block  4
+    #####:   29:}
+        -:   30:
+function _ZN7Console9modify_uiEv called 0 returned 0% blocks executed 0%
+    #####:   31:void Console::modify_ui()
+        -:   32:{
+    #####:   33:    string name;
+    %%%%%:   33-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   33-block  1
+call    2 never executed
+    #####:   34:    cout << "Introduceti numele disciplinei pe care doriti sa o modificati:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   35:    cin >> name;
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   36:    string name1, type, teacher;
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    $$$$$:   36-block  1
+call    6 never executed
+    $$$$$:   36-block  2
+call    7 never executed
+    $$$$$:   36-block  3
+call    8 never executed
+        -:   37:    int hours;
+    #####:   38:    cout << "Introduceti numele disciplinei:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:    cin >> name1;
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:    cout << "Introduceti numarul de ore pe saptamana:";
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   41:    cin >> hours;
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   42:    cout << "Introduceti tipul:";
+    %%%%%:   42-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   43:    cin >> type;
+    %%%%%:   43-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   44:    cout << "Introduceti numele profesorului:";
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:    cin >> teacher;
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:    Discipline d{ name1, hours, type, teacher };
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   46-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   46-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   46-block  3
+call    9 never executed
+call   10 never executed
+call   11 never executed
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+call   12 never executed
+    #####:   47:    srv.modify_s(d, name);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   47-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   47-block  1
+call    6 never executed
+call    7 never executed
+    $$$$$:   47-block  2
+call    8 never executed
+    $$$$$:   47-block  3
+    #####:   48:}
+        -:   49:
+function _ZN7Console7find_uIEv called 0 returned 0% blocks executed 0%
+    #####:   50:void Console::find_uI()
+        -:   51:{
+    #####:   52:    string name;
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   52-block  1
+call    2 never executed
+    #####:   53:    cout << "Introduceti numele disciplinei pe care o cautati:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   54:    cin >> name;
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:    Discipline d = srv.find_s(name);
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   55-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   55-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+call    9 never executed
+    #####:   56:    cout << "|Nume: " << d.get_name() << "|Ore pe sapt: " << d.get_hours() << "|Tip: " << d.get_type() << "|Profesor: " << d.get_teacher() << " |" << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   56-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   56-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   56-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   56-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   56-block  4
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   56-block  5
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    %%%%%:   56-block  6
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+    %%%%%:   56-block  7
+call   25 never executed
+branch 26 never executed
+branch 27 never executed
+    %%%%%:   56-block  8
+call   28 never executed
+branch 29 never executed
+branch 30 never executed
+    %%%%%:   56-block  9
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   56-block 10
+call   34 never executed
+branch 35 never executed
+branch 36 never executed
+    %%%%%:   56-block 11
+call   37 never executed
+branch 38 never executed
+branch 39 never executed
+    %%%%%:   56-block 12
+call   40 never executed
+call   41 never executed
+call   42 never executed
+call   43 never executed
+    $$$$$:   56-block 13
+call   44 never executed
+    $$$$$:   56-block 14
+    $$$$$:   56-block 15
+call   45 never executed
+    $$$$$:   56-block 16
+    $$$$$:   56-block 17
+call   46 never executed
+    $$$$$:   56-block 18
+    #####:   57:}
+        -:   58:
+function _ZN7Console8print_uiERKSt6vectorI10DisciplineSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   59:void Console::print_ui(const vector<Discipline>& disciplines) {
+    #####:   60:    cout << "Lista disciplinelor:\n";
+    %%%%%:   60-block  0
+call    0 never executed
+    #####:   61:    for (int i = 0; i < disciplines.size(); i ++) {
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:        Discipline d = disciplines.at(i);
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   62-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   62-block  2
+call    6 never executed
+    #####:   63:        cout << "|Nume: " << d.get_name() << "|Ore pe sapt: " << d.get_hours() << "|Tip: " << d.get_type() << "|Profesor: " << d.get_teacher() << " |" << '\n';
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   63-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   63-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   63-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   63-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   63-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   63-block  6
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    %%%%%:   63-block  7
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+    %%%%%:   63-block  8
+call   25 never executed
+branch 26 never executed
+branch 27 never executed
+    %%%%%:   63-block  9
+call   28 never executed
+branch 29 never executed
+branch 30 never executed
+    %%%%%:   63-block 10
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   63-block 11
+call   34 never executed
+branch 35 never executed
+branch 36 never executed
+    %%%%%:   63-block 12
+call   37 never executed
+branch 38 never executed
+branch 39 never executed
+    %%%%%:   63-block 13
+call   40 never executed
+call   41 never executed
+call   42 never executed
+call   43 never executed
+    $$$$$:   63-block 14
+call   44 never executed
+    $$$$$:   63-block 15
+    $$$$$:   63-block 16
+call   45 never executed
+    $$$$$:   63-block 17
+    $$$$$:   63-block 18
+call   46 never executed
+    $$$$$:   63-block 19
+        -:   64:    }
+    #####:   65:}
+    %%%%%:   65-block  0
+        -:   66:
+        -:   67:
+function _ZN7Console15filter_hours_uiEv called 0 returned 0% blocks executed 0%
+    #####:   68:void Console::filter_hours_ui()
+        -:   69:{
+        -:   70:    int hours;
+    #####:   71:    cout << "Introduceti numarul de ore:";
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   72:    cin >> hours;
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:    const vector<Discipline>& dd = srv.filter_hours(hours);
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   73-block  1
+call    3 never executed
+    $$$$$:   73-block  2
+call    4 never executed
+    #####:   74:    print_ui(dd);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:}
+        -:   76:
+function _ZN7Console16filter_techar_uiEv called 0 returned 0% blocks executed 0%
+    #####:   77:void Console::filter_techar_ui()
+        -:   78:{
+    #####:   79:    string teacher;
+    %%%%%:   79-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   79-block  1
+call    2 never executed
+    #####:   80:    cout << "Introduceti numele profesorului:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   81:    cin >> teacher;
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   82:    const vector<Discipline>& dd = srv.filter_teacher(teacher);
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   82-block  1
+call    3 never executed
+    $$$$$:   82-block  2
+call    4 never executed
+    #####:   83:    print_ui(dd);
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:}
+        -:   85:
+        -:   86:
+function _Z10sort_name1RK10DisciplineS1_ called 0 returned 0% blocks executed 0%
+    #####:   87:int sort_name1(const Discipline& d1, const Discipline& d2)
+        -:   88:{
+    #####:   89:    return d1.get_name().compare(d2.get_name());
+    %%%%%:   89-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   89-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   89-block  2
+    %%%%%:   89-block  3
+call    7 never executed
+call    8 never executed
+    %%%%%:   89-block  4
+    $$$$$:   89-block  5
+call    9 never executed
+    $$$$$:   89-block  6
+    $$$$$:   89-block  7
+call   10 never executed
+        -:   90:}
+function _Z11sort_hours1RK10DisciplineS1_ called 0 returned 0% blocks executed 0%
+    #####:   91:int sort_hours1(const Discipline& d1, const Discipline& d2) noexcept
+        -:   92:{
+    #####:   93:    return d1.get_hours() > d2.get_hours();
+    %%%%%:   93-block  0
+call    0 never executed
+call    1 never executed
+        -:   94:}
+function _Z18sort_teacher_type1RK10DisciplineS1_ called 0 returned 0% blocks executed 0%
+    #####:   95:int sort_teacher_type1(const Discipline& d1, const Discipline& d2)
+        -:   96:{
+    #####:   97:    if (d1.get_teacher().compare(d2.get_teacher()) == 0) {
+    %%%%%:   97-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   97-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   97-block  2
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   97-block  3
+call   11 never executed
+    $$$$$:   97-block  4
+    $$$$$:   97-block  5
+call   12 never executed
+    $$$$$:   97-block  6
+call   13 never executed
+    #####:   98:        return (d1.get_type().compare(d2.get_type()));
+    %%%%%:   98-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   98-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   98-block  2
+    %%%%%:   98-block  3
+call    7 never executed
+call    8 never executed
+    $$$$$:   98-block  4
+call    9 never executed
+    $$$$$:   98-block  5
+    $$$$$:   98-block  6
+call   10 never executed
+    $$$$$:   98-block  7
+call   11 never executed
+        -:   99:    }
+        -:  100:    else {
+    #####:  101:        return d1.get_teacher().compare(d2.get_teacher());
+    %%%%%:  101-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  101-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  101-block  2
+    %%%%%:  101-block  3
+call    7 never executed
+call    8 never executed
+    $$$$$:  101-block  4
+call    9 never executed
+    $$$$$:  101-block  5
+    $$$$$:  101-block  6
+call   10 never executed
+        -:  102:    }
+        -:  103:}
+        -:  104:
+function _ZN7Console12sort_name_uiEv called 0 returned 0% blocks executed 0%
+    #####:  105:void Console::sort_name_ui()
+        -:  106:{
+    #####:  107:    const vector<Discipline>& dd = srv.sortDisciplines(sort_name1);
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  107-block  1
+call    3 never executed
+    $$$$$:  107-block  2
+call    4 never executed
+    #####:  108:    print_ui(dd);
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  109:}
+        -:  110:
+function _ZN7Console13sort_hours_uiEv called 0 returned 0% blocks executed 0%
+    #####:  111:void Console::sort_hours_ui()
+        -:  112:{
+    #####:  113:    const vector<Discipline>& dd = srv.sortDisciplines(sort_hours1);
+    %%%%%:  113-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  113-block  1
+call    3 never executed
+    $$$$$:  113-block  2
+call    4 never executed
+    #####:  114:    print_ui(dd);
+    %%%%%:  114-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  115:}
+        -:  116:
+function _ZN7Console20sort_teacher_type_uiEv called 0 returned 0% blocks executed 0%
+    #####:  117:void Console::sort_teacher_type_ui()
+        -:  118:{
+    #####:  119:    const vector<Discipline>& dd = srv.sortDisciplines(sort_teacher_type1);
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  119-block  1
+call    3 never executed
+    $$$$$:  119-block  2
+call    4 never executed
+    #####:  120:    print_ui(dd);
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  121:}
+        -:  122:
+        -:  123:
+function _ZN7Console5startEv called 1 returned 100% blocks executed 17%
+        1:  124:void Console::start() {
+        1:  125:    const auto* p = &srv;
+        1:  125-block  0
+        -:  126:    while (true) {
+        1:  127:        cout << "Meniu:\n";
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128:        cout << "1 add\n2 print list\n3 delete discipline\n4 modify discipline\n5 find discipline\n6 filter hours\n7 filter teacher\n8 sort name\n9 sort hours\n10 sort teacher and type\n11 add 10\n";
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  129:        int cmd;
+        1:  130:        cin >> cmd;
+        1:  130-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  131:        try {
+        1:  132:            switch (cmd) {
+        1:  132-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 0
+branch  8 taken 0
+branch  9 taken 0
+branch 10 taken 0
+branch 11 taken 1
+branch 12 taken 0
+    #####:  133:                case 1:
+    #####:  134:                    add_ui();
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  135:                    break;
+    %%%%%:  135-block  0
+    #####:  136:                case 2:
+    #####:  137:                    if (p != nullptr) {
+    %%%%%:  137-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  138:                        print_ui(srv.get_all());
+    %%%%%:  138-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  139:                        break;
+    %%%%%:  139-block  0
+        -:  140:                    }
+        -:  141:                case 3:
+    #####:  142:                    dlt_ui();
+    %%%%%:  142-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  143:                    break;
+    %%%%%:  143-block  0
+    #####:  144:                case 4:
+    #####:  145:                    modify_ui();
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  146:                    break;
+    %%%%%:  146-block  0
+    #####:  147:                case 5:
+    #####:  148:                    find_uI();
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  149:                    break;
+    %%%%%:  149-block  0
+    #####:  150:                case 6:
+    #####:  151:                    filter_hours_ui();
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  152:                    break;
+    %%%%%:  152-block  0
+    #####:  153:                case 7:
+    #####:  154:                    filter_techar_ui();
+    %%%%%:  154-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  155:                    break;
+    %%%%%:  155-block  0
+    #####:  156:                case 8:
+    #####:  157:                    sort_name_ui();
+    %%%%%:  157-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  158:                    break;
+    %%%%%:  158-block  0
+    #####:  159:                case 9:
+    #####:  160:                    sort_hours_ui();
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  161:                    break;
+    %%%%%:  161-block  0
+    #####:  162:                case 10:
+    #####:  163:                    sort_teacher_type_ui();
+    %%%%%:  163-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  164:                    break;
+    %%%%%:  164-block  0
+    #####:  165:                case 11:
+    #####:  166:                    add_10();
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  167:                    break;
+    %%%%%:  167-block  0
+        1:  168:                case 0:
+        1:  169:                    return;
+        1:  169-block  0
+        1:  169-block  1
+    #####:  170:                default:
+    #####:  171:                    cout << "Comanda invalida!\n";
+    %%%%%:  171-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  172:            }
+        -:  173:        }
+    =====:  174:        catch (const RepoException& ex) {
+    $$$$$:  174-block  0
+call    0 never executed
+    $$$$$:  174-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  174-block  2
+call    4 never executed
+    =====:  175:            cout << ex << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  175-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  176:        }
+    =====:  177:        catch (const ValidateException& ex) {
+    $$$$$:  177-block  0
+call    0 never executed
+    $$$$$:  177-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  177-block  2
+call    4 never executed
+    =====:  178:            cout << ex << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  178-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  179:        }
+    #####:  180:    }
+    %%%%%:  180-block  0
+        -:  181:}
+        -:  182:
+function _ZN7Console6add_10Ev called 0 returned 0% blocks executed 0%
+    #####:  183:void Console::add_10() {
+    #####:  184:    srv.add_s("j", 5, "ob", "n");
+    %%%%%:  184-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  184-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  184-block  2
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  184-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  184-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  184-block  5
+call   21 never executed
+    $$$$$:  184-block  6
+    $$$$$:  184-block  7
+call   22 never executed
+    $$$$$:  184-block  8
+    $$$$$:  184-block  9
+call   23 never executed
+    $$$$$:  184-block 10
+    $$$$$:  184-block 11
+call   24 never executed
+    $$$$$:  184-block 12
+    $$$$$:  184-block 13
+call   25 never executed
+    $$$$$:  184-block 14
+    $$$$$:  184-block 15
+call   26 never executed
+    $$$$$:  184-block 16
+call   27 never executed
+    #####:  185:    srv.add_s("b", 69, "cr", "b");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  185-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  185-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  185-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  185-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  185-block  4
+call   21 never executed
+    $$$$$:  185-block  5
+    $$$$$:  185-block  6
+call   22 never executed
+    $$$$$:  185-block  7
+    $$$$$:  185-block  8
+call   23 never executed
+    $$$$$:  185-block  9
+    $$$$$:  185-block 10
+call   24 never executed
+    $$$$$:  185-block 11
+    $$$$$:  185-block 12
+call   25 never executed
+    $$$$$:  185-block 13
+    $$$$$:  185-block 14
+call   26 never executed
+    $$$$$:  185-block 15
+call   27 never executed
+    #####:  186:    srv.add_s("k", 1, "ta", "nua");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  186-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  186-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  186-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  186-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  186-block  4
+call   21 never executed
+    $$$$$:  186-block  5
+    $$$$$:  186-block  6
+call   22 never executed
+    $$$$$:  186-block  7
+    $$$$$:  186-block  8
+call   23 never executed
+    $$$$$:  186-block  9
+    $$$$$:  186-block 10
+call   24 never executed
+    $$$$$:  186-block 11
+    $$$$$:  186-block 12
+call   25 never executed
+    $$$$$:  186-block 13
+    $$$$$:  186-block 14
+call   26 never executed
+    $$$$$:  186-block 15
+call   27 never executed
+    #####:  187:    srv.add_s("l", 1, "ta", "dO");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  187-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  187-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  187-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  187-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  187-block  4
+call   21 never executed
+    $$$$$:  187-block  5
+    $$$$$:  187-block  6
+call   22 never executed
+    $$$$$:  187-block  7
+    $$$$$:  187-block  8
+call   23 never executed
+    $$$$$:  187-block  9
+    $$$$$:  187-block 10
+call   24 never executed
+    $$$$$:  187-block 11
+    $$$$$:  187-block 12
+call   25 never executed
+    $$$$$:  187-block 13
+    $$$$$:  187-block 14
+call   26 never executed
+    $$$$$:  187-block 15
+call   27 never executed
+    #####:  188:    srv.add_s("f", 1, "dr", "de");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  188-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  188-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  188-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  188-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  188-block  4
+call   21 never executed
+    $$$$$:  188-block  5
+    $$$$$:  188-block  6
+call   22 never executed
+    $$$$$:  188-block  7
+    $$$$$:  188-block  8
+call   23 never executed
+    $$$$$:  188-block  9
+    $$$$$:  188-block 10
+call   24 never executed
+    $$$$$:  188-block 11
+    $$$$$:  188-block 12
+call   25 never executed
+    $$$$$:  188-block 13
+    $$$$$:  188-block 14
+call   26 never executed
+    $$$$$:  188-block 15
+call   27 never executed
+    #####:  189:    srv.add_s("e", 10, "hh", "ok");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  189-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  189-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  189-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  189-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  189-block  4
+call   21 never executed
+    $$$$$:  189-block  5
+    $$$$$:  189-block  6
+call   22 never executed
+    $$$$$:  189-block  7
+    $$$$$:  189-block  8
+call   23 never executed
+    $$$$$:  189-block  9
+    $$$$$:  189-block 10
+call   24 never executed
+    $$$$$:  189-block 11
+    $$$$$:  189-block 12
+call   25 never executed
+    $$$$$:  189-block 13
+    $$$$$:  189-block 14
+call   26 never executed
+    $$$$$:  189-block 15
+call   27 never executed
+    #####:  190:    srv.add_s("h", 21, "da", "ok");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  190-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  190-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  190-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  190-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  190-block  4
+call   21 never executed
+    $$$$$:  190-block  5
+    $$$$$:  190-block  6
+call   22 never executed
+    $$$$$:  190-block  7
+    $$$$$:  190-block  8
+call   23 never executed
+    $$$$$:  190-block  9
+    $$$$$:  190-block 10
+call   24 never executed
+    $$$$$:  190-block 11
+    $$$$$:  190-block 12
+call   25 never executed
+    $$$$$:  190-block 13
+    $$$$$:  190-block 14
+call   26 never executed
+    $$$$$:  190-block 15
+call   27 never executed
+    #####:  191:    srv.add_s("a", 9, "fe", "a");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  191-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  191-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  191-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  191-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  191-block  4
+call   21 never executed
+    $$$$$:  191-block  5
+    $$$$$:  191-block  6
+call   22 never executed
+    $$$$$:  191-block  7
+    $$$$$:  191-block  8
+call   23 never executed
+    $$$$$:  191-block  9
+    $$$$$:  191-block 10
+call   24 never executed
+    $$$$$:  191-block 11
+    $$$$$:  191-block 12
+call   25 never executed
+    $$$$$:  191-block 13
+    $$$$$:  191-block 14
+call   26 never executed
+    $$$$$:  191-block 15
+call   27 never executed
+    #####:  192:    srv.add_s("c", 2, "bu", "ok");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  192-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  192-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  192-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  192-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  192-block  4
+call   21 never executed
+    $$$$$:  192-block  5
+    $$$$$:  192-block  6
+call   22 never executed
+    $$$$$:  192-block  7
+    $$$$$:  192-block  8
+call   23 never executed
+    $$$$$:  192-block  9
+    $$$$$:  192-block 10
+call   24 never executed
+    $$$$$:  192-block 11
+    $$$$$:  192-block 12
+call   25 never executed
+    $$$$$:  192-block 13
+    $$$$$:  192-block 14
+call   26 never executed
+    $$$$$:  192-block 15
+call   27 never executed
+    #####:  193:    srv.add_s("d", 420, "ma", "d");
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  193-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  193-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  193-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  193-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:  193-block  4
+call   21 never executed
+    $$$$$:  193-block  5
+    $$$$$:  193-block  6
+call   22 never executed
+    $$$$$:  193-block  7
+    $$$$$:  193-block  8
+call   23 never executed
+    $$$$$:  193-block  9
+    $$$$$:  193-block 10
+call   24 never executed
+    $$$$$:  193-block 11
+    $$$$$:  193-block 12
+call   25 never executed
+    $$$$$:  193-block 13
+    $$$$$:  193-block 14
+call   26 never executed
+    #####:  194:}

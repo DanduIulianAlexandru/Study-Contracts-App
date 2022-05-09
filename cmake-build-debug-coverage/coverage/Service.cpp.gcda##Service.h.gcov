@@ -1,0 +1,53 @@
+        -:    0:Source:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/service/Service.h
+        -:    0:Graph:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/service/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug-coverage/CMakeFiles/StudyContractsApp.dir/service/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include "../domain/Discipline.h"
+        -:    4:#include "../repository/Repo.h"
+        -:    5:#include <string>
+        -:    6:#include <vector>
+        -:    7:#include <functional>
+        -:    8:#include "../validate/Validate.h"
+        -:    9:typedef bool(*Compare)(const Discipline&, const string&);
+        -:   10:typedef int(*Sort)(const Discipline&, const Discipline&);
+        -:   11://using std::vector;
+        -:   12:using std::function;
+        -:   13:
+        -:   14:class Service {
+        -:   15:    Repo& repo;
+        -:   16:    Validate& val;
+        -:   17:public:
+function _ZN7ServiceC2ER4RepoR8Validate called 0 returned 0% blocks executed 0%
+    #####:   18:    Service(Repo& repo, Validate& val) noexcept : repo{ repo }, val{ val }{};
+        -:   19:    Service(const Service& srv) = delete;
+        -:   20:
+        -:   21:
+function _ZN7Service7get_allEv called 5 returned 100% blocks executed 100%
+        5:   22:    const vector<Discipline>& get_all() noexcept {
+        5:   23:        return repo.get_all();
+        5:   23-block  0
+call    0 returned 5
+        -:   24:    }
+        -:   25:    // append discipline to the list service function
+        -:   26:    void add_s(const string& name, int hours, const string& type, const string& teacher);
+        -:   27:
+        -:   28:    //delete discipline from the list service function
+        -:   29:    void dlt_s(string name);
+        -:   30:
+        -:   31:
+        -:   32:    //find discipline by the name in the list
+        -:   33:    const Discipline& find_s(string name) const;
+        -:   34:
+        -:   35:    //modify a discipline 
+        -:   36:    void modify_s(const Discipline& d, string mark);
+        -:   37:
+        -:   38:    const vector<Discipline> filter_hours(const int& hours);
+        -:   39:
+        -:   40:    const vector<Discipline> filter_teacher(const string& teacher);
+        -:   41:
+        -:   42:    vector<Discipline> sortDisciplines(Sort sortFunction);
+        -:   43:};
+        -:   44:
+        -:   45:void tests_service();
