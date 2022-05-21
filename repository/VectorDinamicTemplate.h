@@ -1,4 +1,3 @@
-/*
 #pragma once
 #include "../domain/Discipline.h"
 #define INITIAL_CAPACITY 5
@@ -211,4 +210,3 @@ template<typename Element>
 bool IteratorVector<Element>:: operator!=(const IteratorVector<Element>& ot)noexcept {
     return *this != ot;
 }
-*/
