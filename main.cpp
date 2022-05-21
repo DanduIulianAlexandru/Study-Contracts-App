@@ -8,10 +8,10 @@
 #include <QApplication>
 #include "GUI/ContractsGUI.h"
 int main(int argc, char** argv) {
-    //repo_tests();
-    //domain_tests();
-    //validate_tests();
-    //tests_service();
+    repo_tests();
+    domain_tests();
+    validate_tests();
+    tests_service();
     //FakeRepo repo;
     Repo repo;
     //RepoFile repo { "fisier.cvs" };
