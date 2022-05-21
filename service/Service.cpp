@@ -16,13 +16,13 @@ void Service::add_s(const string& name, int hours, const string& type, const str
     Discipline d{ name, hours, type, teacher };
     val.validate(d);
     repo.add(d);
-    ActionsUndo.push_back(std::make_unique<UndoAdd>(repo, d));
+//    ActionsUndo.push_back(std::make_unique<UndoAdd>(repo, d));
 }
 
 void Service::dlt_s(string name) {
     Discipline d = find_s(name);
     repo.dlt(name);
-    ActionsUndo.push_back(std::make_unique<UndoDelete>(repo, d));
+ //   ActionsUndo.push_back(std::make_unique<UndoDelete>(repo, d));
 }
 
 const Discipline& Service::find_s(string name) const
@@ -34,7 +34,7 @@ void Service::modify_s(const Discipline& d, string name)
 {
     Discipline discipline = find_s(name);
     repo.modify(d, name);
-    ActionsUndo.push_back(std::make_unique<UndoModify>(name, discipline, repo));
+//    ActionsUndo.push_back(std::make_unique<UndoModify>(name, discipline, repo));
 }
 
 //FILTRARI
@@ -106,9 +106,9 @@ void Service::Undo() {
 size_t FakeRepo::generate_number() noexcept {
     std::mt19937 mt{ std::random_device{}() };
     const std::uniform_int_distribution<size_t> dist(1, 6);
-    const size_t numarGenerat = dist(mt);// numar aleator intre [0,size-1]
+//    const size_t numarGenerat = dist(mt);// numar aleator intre [0,size-1]
 
-    return numarGenerat;
+ //   return numarGenerat;
 }
 
 bool FakeRepo::decide(size_t nr) {
@@ -116,6 +116,26 @@ bool FakeRepo::decide(size_t nr) {
     if(nr % 2)
         throw RepoException("Nu s-a putut face operatia avand numarul generat impar: " + numar);
     return true;
+}
+
+int Service::stringToInt(const std::string &str) {
+    int num = 0;
+    for (char c: str) {
+        if (c < '0' || c > '9')
+            throw RepoException("trebuie introdus un numar!");
+        num = num * 10 + (c - '0');
+    }
+    return num;
+}
+
+void Service::modificare(string name, int hours, string type, string teacher) {
+    const vector<Discipline>& dsp = repo.get_all();
+    for(const auto& discipline : dsp){
+        if(discipline.get_name() == name){
+            Discipline d {name, hours, type, teacher};
+            repo.modify(d, name);
+        }
+    }
 }
 
 //TESTS

@@ -9,7 +9,7 @@ using std::cout;
 class Discipline {
 private:
     string name;
-    int hours{};
+    int hours;
     string type;
     string teacher;
 public:

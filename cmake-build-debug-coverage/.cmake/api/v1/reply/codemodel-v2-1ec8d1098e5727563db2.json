@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.22"
+						"string" : "3.16"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "StudyContractsApp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-StudyContractsApp-Debug-00f26e4c1c6245715d67.json",
+					"jsonFile" : "target-StudyContractsApp-Debug-85f5232c2e35854c3249.json",
 					"name" : "StudyContractsApp",
 					"projectIndex" : 0
 				}

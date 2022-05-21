@@ -37,6 +37,8 @@ public:
     //modify a discipline 
     void modify_s(const Discipline& d, string mark);
 
+    void modificare(string name, int hours, string type, string teacher);
+
     const vector<Discipline> filter_hours(const int& hours);
 
     const vector<Discipline> filter_teacher(const string& teacher);
@@ -51,6 +53,9 @@ public:
 
 
     void Undo();
+
+    static int stringToInt(const std::string &str);
+
 };
 
 void tests_service();

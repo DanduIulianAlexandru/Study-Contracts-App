@@ -1,4 +1,5 @@
-"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\dandu\CLionProjects\StudyContractsApp -B C:\Users\dandu\CLionProjects\StudyContractsApp\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -DCMAKE_PREFIX_PATH=C:\Qt\6.2.4\mingw_64\lib\cmake -G Ninja -S C:\Users\dandu\CLionProjects\StudyContractsApp -B C:\Users\dandu\CLionProjects\StudyContractsApp\cmake-build-debug
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/dandu/CLionProjects/StudyContractsApp/cmake-build-debug

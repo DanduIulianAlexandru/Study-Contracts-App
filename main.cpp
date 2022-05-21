@@ -5,20 +5,28 @@
 #include "service/Service.h"
 #include "fake_repo.h"
 #include "repository/file_repo.h"
-int main() {
+#include <QApplication>
+#include "GUI/ContractsGUI.h"
+int main(int argc, char** argv) {
     //repo_tests();
     //domain_tests();
     //validate_tests();
     //tests_service();
-
-
     //FakeRepo repo;
-
     Repo repo;
     //RepoFile repo { "fisier.cvs" };
     Validate val;
     Service srv{ repo, val };
-    Console ui{ srv };
-    ui.start();
+
+    srv.add_s("OOP", 23, "obligatorie", "Istvan");
+    srv.add_s("OS", 22, "obligatorie", "Boian");
+
+    QApplication a{argc, argv};
+    ContractsGUI g{srv};
+
+    g.show();
+    a.exec();
+    //Console ui{ srv };
+    //ui.start();
     return 0;
 }

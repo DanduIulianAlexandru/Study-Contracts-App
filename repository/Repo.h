@@ -44,10 +44,11 @@ public:
 };
 
 class RepoException {
-    string msg;
 public:
     RepoException(string m) :msg{ m } {}
     friend ostream& operator<<(ostream& out, const RepoException& ex);
+
+    string msg;
 };
 
 void repo_tests();
